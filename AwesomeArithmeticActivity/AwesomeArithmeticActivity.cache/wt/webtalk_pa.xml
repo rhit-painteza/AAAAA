@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon May 08 14:12:32 2023">
+<application name="pa" timeStamp="Tue May 16 10:33:46 2023">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="f9d9cacaa8b94d2b8dffe616f860f7a5" type="ProjectID"/>
-<property name="ProjectIteration" value="21" type="ProjectIteration"/>
+<property name="ProjectIteration" value="22" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -17,41 +17,56 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AutoAssignAddress" value="1" type="JavaHandler"/>
-<property name="CloseProject" value="-1" type="JavaHandler"/>
-<property name="CreateTopHDL" value="1" type="JavaHandler"/>
-<property name="CustomizeRSBBlock" value="2" type="JavaHandler"/>
-<property name="EditDelete" value="4" type="JavaHandler"/>
+<property name="AutoAssignAddress" value="2" type="JavaHandler"/>
+<property name="CloseProject" value="0" type="JavaHandler"/>
+<property name="CoreView" value="1" type="JavaHandler"/>
+<property name="CreateTopHDL" value="2" type="JavaHandler"/>
+<property name="CustomizeRSBBlock" value="13" type="JavaHandler"/>
+<property name="EditCopy" value="2" type="JavaHandler"/>
+<property name="EditDelete" value="8" type="JavaHandler"/>
 <property name="EditInIPPackagerHandler" value="2" type="JavaHandler"/>
-<property name="EditUndo" value="1" type="JavaHandler"/>
+<property name="EditUndo" value="9" type="JavaHandler"/>
 <property name="IPPackagerHandler" value="2" type="JavaHandler"/>
-<property name="ManageCompositeTargets" value="4" type="JavaHandler"/>
-<property name="NewExportHardware" value="6" type="JavaHandler"/>
-<property name="NewLaunchHardware" value="6" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="2" type="JavaHandler"/>
-<property name="OpenProject" value="1" type="JavaHandler"/>
-<property name="RegenerateRSBLayout" value="1" type="JavaHandler"/>
-<property name="ReportIPStatus" value="2" type="JavaHandler"/>
-<property name="RunBitgen" value="4" type="JavaHandler"/>
+<property name="ManageCompositeTargets" value="5" type="JavaHandler"/>
+<property name="NewExportHardware" value="8" type="JavaHandler"/>
+<property name="NewLaunchHardware" value="8" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="7" type="JavaHandler"/>
+<property name="OpenProject" value="3" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="3" type="JavaHandler"/>
+<property name="RegenerateRSBLayout" value="2" type="JavaHandler"/>
+<property name="ReportIPStatus" value="3" type="JavaHandler"/>
+<property name="RunBitgen" value="5" type="JavaHandler"/>
 <property name="RunImplementation" value="1" type="JavaHandler"/>
 <property name="RunSynthesis" value="3" type="JavaHandler"/>
-<property name="SaveRSBDesign" value="3" type="JavaHandler"/>
+<property name="SaveRSBDesign" value="4" type="JavaHandler"/>
 <property name="UpgradeIP" value="3" type="JavaHandler"/>
+<property name="ValidateRSBDesign" value="5" type="JavaHandler"/>
 <property name="ViewTaskProjectManager" value="4" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, Open Recent File" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_IP_LOCATION, Open Recent IP Location" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, C:/Users/painteza/Downloads/lab10part2-icwzap-p1copy/lab10part2-icwzap-p1copy/lab10part2-icwzap-p1copy.xpr" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="8" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SaveProjectUtils_DONT_SAVE, Don't Save" value="1" type="GuiResourceData"/>
+<property name="Interrupts, Interrupts" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_EXPORT_HARDWARE, Export Hardware..." value="2" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, Launch SDK" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints, constrs_1, base.xdc], 4, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints, constrs_1, base.xdc], 4, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints], 2" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, Fabric Interrupts ;  ; Enable PL Interrupts to PS and vice versa, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, PL-PS Interrupt Ports ; PL-PS Interrupt Ports ; PL-PS Interrupt Ports, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, PL-PS Interrupt Ports ; PL-PS Interrupt Ports ; PL-PS Interrupt Ports, 1, PL-PS Interrupt Ports, 0, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_EXPORT, Export" value="9" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="10" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, Open Recent File" value="5" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_IP_LOCATION, Open Recent IP Location" value="5" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="5" type="GuiResourceData"/>
+<property name="PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, Include bitstream, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="4" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="76" type="GuiMode"/>
+<property name="GuiMode" value="51" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="62" type="TclMode"/>
+<property name="TclMode" value="45" type="TclMode"/>
 </item>
 </section>
 </application>

@@ -57,8 +57,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_0 |
 # IP: bd/system/ip/system_xbar_1/system_xbar_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_1 || ORIG_REF_NAME==system_xbar_1}]
 
-# IP: bd/system/ip/system_Painter_LED_IP_0_1/system_Painter_LED_IP_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_Painter_LED_IP_0_1 || ORIG_REF_NAME==system_Painter_LED_IP_0_1}]
+# IP: bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_timer_0_0 || ORIG_REF_NAME==system_axi_timer_0_0}]
 
 # IP: bd/system/ip/system_m00_regslice_0/system_m00_regslice_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_m00_regslice_0 || ORIG_REF_NAME==system_m00_regslice_0}]
@@ -127,6 +127,11 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/system/ip/system_xbar_0/system_xbar_0_ooc.xdc
 
 # XDC: bd/system/ip/system_xbar_1/system_xbar_1_ooc.xdc
+
+# XDC: bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_timer_0_0 || ORIG_REF_NAME==system_axi_timer_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0_ooc.xdc
 
 # XDC: bd/system/ip/system_m00_regslice_0/system_m00_regslice_0_ooc.xdc
 

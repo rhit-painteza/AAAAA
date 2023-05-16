@@ -141,5 +141,13 @@ vhdl xil_defaultlib "../../../bd/system/ip/system_hdmi_tx_0_0/work/hdl/TMDSEncod
 vhdl xil_defaultlib "../../../bd/system/ip/system_hdmi_tx_0_0/work/hdl/SerializerN_1.vhd" 
 vhdl xil_defaultlib "../../../bd/system/ip/system_hdmi_tx_0_0/work/hdl/DVITransmitter.vhd" 
 vhdl xil_defaultlib "../../../bd/system/ip/system_hdmi_tx_0_0/sim/system_hdmi_tx_0_0.vhd" 
+vhdl axi_timer_v2_0_11 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/counter_f.vhd" 
+vhdl axi_timer_v2_0_11 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/mux_onehot_f.vhd" 
+vhdl axi_timer_v2_0_11 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_types.vhd" 
+vhdl axi_timer_v2_0_11 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/timer_control.vhd" 
+vhdl axi_timer_v2_0_11 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/count_module.vhd" 
+vhdl axi_timer_v2_0_11 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_core.vhd" 
+vhdl axi_timer_v2_0_11 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/axi_timer.vhd" 
+vhdl xil_defaultlib "../../../bd/system/ip/system_axi_timer_0_0/sim/system_axi_timer_0_0.vhd" 
 
 nosort

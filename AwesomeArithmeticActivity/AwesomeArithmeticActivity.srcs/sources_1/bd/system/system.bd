@@ -316,16 +316,6 @@
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
-        <spirit:port>
-          <spirit:name>led</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>3</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -456,9 +446,11 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_S_AXI_HP1">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_DMA0">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_DMA1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_USE_FABRIC_INTERRUPT">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_CLK1_PORT">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_CLK2_PORT">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_RST1_PORT">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_IRQ_F2P_INTR">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_IMPORT_BOARD_PRESET">./lib/xml/ZYBO_zynq_def.xml</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_SD0_GRP_WP_ENABLE">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_I2C0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
@@ -503,10 +495,10 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Painter_LED_IP_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="Painter_LED_IP" spirit:vendor="rose-hulman.edu" spirit:version="1.0"/>
+        <spirit:instanceName>axi_timer_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_timer" spirit:vendor="xilinx.com" spirit:version="2.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_Painter_LED_IP_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_axi_timer_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -604,7 +596,7 @@
       <spirit:interconnection>
         <spirit:name>processing_system7_0_axi_periph_M00_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="processing_system7_0_axi_periph"/>
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="Painter_LED_IP_0"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_timer_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
@@ -790,6 +782,7 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="DMA0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="DMA1_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="axi_timer_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
@@ -800,7 +793,6 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M06_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M07_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="Painter_LED_IP_0" spirit:portRef="s_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK1</spirit:name>
@@ -840,6 +832,7 @@
         <spirit:internalPortReference spirit:componentRef="SWs_4Bits" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_1" spirit:portRef="axi_resetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_timer_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ARESETN"/>
@@ -852,7 +845,6 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M05_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M06_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M07_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="Painter_LED_IP_0" spirit:portRef="s_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>vdd_const</spirit:name>
@@ -872,9 +864,9 @@
         <spirit:internalPortReference spirit:componentRef="axi_vdma_1" spirit:portRef="mm2s_frame_ptr_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>Painter_LED_IP_0_led</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Painter_LED_IP_0" spirit:portRef="led"/>
-        <spirit:externalPortReference spirit:portRef="led"/>
+        <spirit:name>axi_timer_0_interrupt</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_timer_0" spirit:portRef="interrupt"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -4769,9 +4761,9 @@
             <spirit:range>64K</spirit:range>
           </spirit:segment>
           <spirit:segment>
-            <spirit:name>SEG_Painter_LED_IP_0_S_AXI_reg</spirit:name>
-            <spirit:displayName>/Painter_LED_IP_0/S_AXI/S_AXI_reg</spirit:displayName>
-            <spirit:addressOffset>0x43C30000</spirit:addressOffset>
+            <spirit:name>SEG_axi_timer_0_Reg</spirit:name>
+            <spirit:displayName>/axi_timer_0/S_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x42800000</spirit:addressOffset>
             <spirit:range>64K</spirit:range>
           </spirit:segment>
         </spirit:segments>

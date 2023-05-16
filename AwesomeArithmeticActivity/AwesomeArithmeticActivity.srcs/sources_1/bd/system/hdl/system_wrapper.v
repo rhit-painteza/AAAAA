@@ -1,8 +1,8 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-//Date        : Sat May 06 20:11:16 2023
-//Host        : painteza-stg4 running 64-bit major release  (build 9200)
+//Date        : Mon May 15 13:11:05 2023
+//Host        : RHIT-R90VM7XZ running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
 //Purpose     : IP block netlist
@@ -55,7 +55,6 @@ module system_wrapper
     btns_4bits_tri_i,
     iic_0_scl_io,
     iic_0_sda_io,
-    led,
     sws_4bits_tri_i);
   output [0:0]AC_BCLK;
   output AC_MCLK;
@@ -102,7 +101,6 @@ module system_wrapper
   input [3:0]btns_4bits_tri_i;
   inout iic_0_scl_io;
   inout iic_0_sda_io;
-  output [3:0]led;
   input [3:0]sws_4bits_tri_i;
 
   wire [0:0]AC_BCLK;
@@ -156,7 +154,6 @@ module system_wrapper
   wire iic_0_sda_io;
   wire iic_0_sda_o;
   wire iic_0_sda_t;
-  wire [3:0]led;
   wire [3:0]sws_4bits_tri_i;
 
   IOBUF iic_0_scl_iobuf
@@ -219,6 +216,5 @@ module system_wrapper
         .IIC_0_sda_t(iic_0_sda_t),
         .RED_O(RED_O),
         .SWs_4Bits_tri_i(sws_4bits_tri_i),
-        .VSYNC_O(VSYNC_O),
-        .led(led));
+        .VSYNC_O(VSYNC_O));
 endmodule

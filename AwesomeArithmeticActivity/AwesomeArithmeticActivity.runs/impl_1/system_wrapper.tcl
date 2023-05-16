@@ -44,44 +44,45 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.cache/wt [current_project]
-  set_property parent.project_path C:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.cache/wt [current_project]
+  set_property parent.project_path C:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.xpr [current_project]
   set_property ip_repo_paths {
-  c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.cache/ip
-  C:/Users/painteza/Documents/ECE530/ip_repo/Painter_LED_IP_1.0
-  C:/Users/painteza/Documents/ECE530/ip_repo/Painter_LED_ip_1.0
-  C:/Users/painteza/Documents/ECE530/zybo_base_system/zybo_base_system/source/vivado/hw/lib
-  C:/Users/painteza/Documents/ECE530/zybo_base_system/zybo_base_system/source/vivado/hw/ip_repo
+  c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.cache/ip
+  C:/Users/wilsonic/ece530labs/project/ip_repo/Painter_LED_IP_1.0
+  C:/Users/wilsonic/ece530labs/project/ip_repo/Painter_LED_ip_1.0
+  C:/Users/wilsonic/ece530labs/project/zybo_base_system/zybo_base_system/source/vivado/hw/lib
+  C:/Users/wilsonic/ece530labs/project/zybo_base_system/zybo_base_system/source/vivado/hw/ip_repo
 } [current_project]
-  set_property ip_output_repo c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.cache/ip [current_project]
+  set_property ip_output_repo c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.cache/ip [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.runs/synth_1/system_wrapper.dcp
-  read_xdc -prop_thru_buffers -ref system_BTNs_4Bits_0 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_board.xdc
-  set_property processing_order EARLY [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_board.xdc]
-  read_xdc -ref system_BTNs_4Bits_0 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0.xdc
-  set_property processing_order EARLY [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0.xdc]
-  read_xdc -prop_thru_buffers -ref system_SWs_4Bits_2 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2_board.xdc
-  set_property processing_order EARLY [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2_board.xdc]
-  read_xdc -ref system_SWs_4Bits_2 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2.xdc
-  set_property processing_order EARLY [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2.xdc]
-  read_xdc -ref system_axi_vdma_0_0 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc
-  set_property processing_order EARLY [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc]
-  read_xdc -ref system_axi_vdma_1_1 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1.xdc
-  set_property processing_order EARLY [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1.xdc]
-  read_xdc -ref system_processing_system7_0_0 -cells inst c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
-  read_xdc C:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/constrs_1/new/base.xdc
-  read_xdc -ref system_axi_vdma_0_0 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc]
-  read_xdc -ref system_axi_vdma_1_1 -cells U0 c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1_clocks.xdc
-  set_property processing_order LATE [get_files c:/Users/painteza/Documents/ECE530/lab11_part2_redo/lab11_part2_redo.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1_clocks.xdc]
+  add_files -quiet C:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.runs/synth_1/system_wrapper.dcp
+  read_xdc -prop_thru_buffers -ref system_BTNs_4Bits_0 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_board.xdc]
+  read_xdc -ref system_BTNs_4Bits_0 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0.xdc]
+  read_xdc -prop_thru_buffers -ref system_SWs_4Bits_2 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2_board.xdc]
+  read_xdc -ref system_SWs_4Bits_2 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2.xdc]
+  read_xdc -ref system_axi_vdma_0_0 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc]
+  read_xdc -ref system_axi_vdma_1_1 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1.xdc]
+  read_xdc -ref system_processing_system7_0_0 -cells inst c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
+  read_xdc -ref system_axi_timer_0_0 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.xdc]
+  read_xdc C:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/constrs_1/new/base.xdc
+  read_xdc -ref system_axi_vdma_0_0 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc]
+  read_xdc -ref system_axi_vdma_1_1 -cells U0 c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.srcs/sources_1/bd/system/ip/system_axi_vdma_1_1/system_axi_vdma_1_1_clocks.xdc]
   link_design -top system_wrapper -part xc7z010clg400-1
   write_hwdef -file system_wrapper.hwdef
   close_msg_db -file init_design.pb

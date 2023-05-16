@@ -341,6 +341,10 @@
           <spirit:name>SENSITIVITY</spirit:name>
           <spirit:value spirit:id="BUSIFPARAM_VALUE.IP2INTC_IRQ.SENSITIVITY">LEVEL_HIGH</spirit:value>
         </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PortWidth</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.IP2INTC_IRQ.PortWidth">1</spirit:value>
+        </spirit:parameter>
       </spirit:parameters>
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
