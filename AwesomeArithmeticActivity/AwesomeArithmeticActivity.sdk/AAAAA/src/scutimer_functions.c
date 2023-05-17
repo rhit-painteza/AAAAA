@@ -112,9 +112,9 @@ void TimerIntrHandler(void *CallBackRef)
 		XScuTimer_ClearInterruptStatus(TimerInstancePtr);
 		//ReadTemperature(&i2c_pl, &pl_tmp,PL_TMP101_ADDRESS);
 		//ReadTemperature(&i2c_ps, &ps_tmp,PS_TMP101_ADDRESS);
-		TimerCount = TimerCount+1;
+		timer_seconds = timer_seconds-1;
+		DRAW_TIMER_FLAG = 1;
 		//XGpio_DiscreteWrite(&LEDInst, 1, TimerCount);
-		printf("Interrupt!\n");
 		//xil_printf("\r\nTimerCount = %d", TimerCount);
 	}
 }	//end TimerIntrHandler()

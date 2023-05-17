@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue May 16 10:33:46 2023">
+<application name="pa" timeStamp="Tue May 16 22:11:59 2023">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="f9d9cacaa8b94d2b8dffe616f860f7a5" type="ProjectID"/>
 <property name="ProjectIteration" value="22" type="ProjectIteration"/>
@@ -29,7 +29,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="IPPackagerHandler" value="2" type="JavaHandler"/>
 <property name="ManageCompositeTargets" value="5" type="JavaHandler"/>
 <property name="NewExportHardware" value="8" type="JavaHandler"/>
-<property name="NewLaunchHardware" value="8" type="JavaHandler"/>
+<property name="NewLaunchHardware" value="9" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="7" type="JavaHandler"/>
 <property name="OpenProject" value="3" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="3" type="JavaHandler"/>
@@ -45,28 +45,18 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ViewTaskSynthesis" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="Interrupts, Interrupts" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_EXPORT_HARDWARE, Export Hardware..." value="2" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, Launch SDK" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints, constrs_1, base.xdc], 4, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints, constrs_1, base.xdc], 4, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints], 2" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, Fabric Interrupts ;  ; Enable PL Interrupts to PS and vice versa, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, PL-PS Interrupt Ports ; PL-PS Interrupt Ports ; PL-PS Interrupt Ports, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, PL-PS Interrupt Ports ; PL-PS Interrupt Ports ; PL-PS Interrupt Ports, 1, PL-PS Interrupt Ports, 0, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_EXPORT, Export" value="9" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="10" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, Open Recent File" value="5" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_IP_LOCATION, Open Recent IP Location" value="5" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="5" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, Include bitstream, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="4" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, Launch SDK" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/wilsonic/ece530labs/project/AAAAA/AwesomeArithmeticActivity/AwesomeArithmeticActivity.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_EXPORT, Export" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, Open Recent File" value="3" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_IP_LOCATION, Open Recent IP Location" value="3" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="51" type="GuiMode"/>
+<property name="GuiMode" value="52" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="45" type="TclMode"/>
+<property name="TclMode" value="46" type="TclMode"/>
 </item>
 </section>
 </application>
